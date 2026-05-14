@@ -518,6 +518,20 @@
   }
   cargarEstadisticas();
 
+  // Verificar si Ultra está disponible en la ciudad del visitante
+  async function verificarUltra() {
+    try {
+      const ciudad = encodeURIComponent('Tepic, Nayarit, México');
+      const res  = await fetch(`https://rutaoptima-backend-production.up.railway.app/api/analytics/ultra-disponible?ciudad=${ciudad}`);
+      const data = await res.json();
+      if (data.success && data.data?.ultraDisponible) {
+        ultraAvailable = true;
+        renderUltraCard();
+      }
+    } catch (e) {}
+  }
+  verificarUltra();
+
   function renderUltraCard() {
     const ultraCard = document.getElementById('ultraCard');
     if (!ultraCard) return;
