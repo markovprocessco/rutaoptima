@@ -26,7 +26,6 @@
     overflow-x: hidden;
   }
 
-  /* NAV */
   nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -56,11 +55,7 @@
     font-size: 20px;
     color: var(--black);
   }
-  .logo-text {
-    font-weight: 700;
-    font-size: 18px;
-    color: var(--text);
-  }
+  .logo-text { font-weight: 700; font-size: 18px; color: var(--text); }
   .logo-text span { color: var(--lime); }
   .nav-cta {
     background: var(--lime);
@@ -76,7 +71,6 @@
   }
   .nav-cta:hover { opacity: 0.85; }
 
-  /* HERO */
   .hero {
     min-height: 100vh;
     display: flex;
@@ -172,12 +166,7 @@
   }
   .btn-ghost:hover { border-color: rgba(255,255,255,0.4); }
 
-  /* POPUP PREVIEW */
-  .popup-preview {
-    margin-top: 80px;
-    display: flex;
-    justify-content: center;
-  }
+  .popup-preview { margin-top: 80px; display: flex; justify-content: center; }
   .popup-demo {
     background: rgba(12,12,11,0.95);
     border: 1px solid rgba(197,242,74,0.2);
@@ -227,12 +216,7 @@
     font-size: 13px;
   }
 
-  /* FEATURES */
-  .section {
-    padding: 100px 24px;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
+  .section { padding: 100px 24px; max-width: 1100px; margin: 0 auto; }
   .section-label {
     font-weight: 600;
     font-size: 11px;
@@ -254,11 +238,7 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2px;
   }
-  .feature-card {
-    background: var(--card);
-    padding: 40px;
-    transition: background 0.2s;
-  }
+  .feature-card { background: var(--card); padding: 40px; transition: background 0.2s; }
   .feature-card:hover { background: #1f1f1d; }
   .feature-card:first-child { border-radius: 20px 0 0 0; }
   .feature-card:nth-child(2) { border-radius: 0 20px 0 0; }
@@ -277,12 +257,7 @@
   .feature-title { font-weight: 700; font-size: 18px; margin-bottom: 10px; }
   .feature-desc { color: #666660; font-size: 15px; line-height: 1.7; }
 
-  /* HOW IT WORKS */
-  .how-section {
-    padding: 100px 24px 120px;
-    background: var(--dark);
-    overflow: visible;
-  }
+  .how-section { padding: 100px 24px 120px; background: var(--dark); overflow: visible; }
   .how-inner { max-width: 1100px; margin: 0 auto; }
   .steps {
     display: grid;
@@ -291,22 +266,11 @@
     margin-top: 64px;
   }
   .step { display: flex; flex-direction: column; gap: 16px; }
-  .step-num {
-    font-weight: 800;
-    font-size: 48px;
-    color: rgba(197,242,74,0.2);
-    line-height: 1;
-  }
+  .step-num { font-weight: 800; font-size: 48px; color: rgba(197,242,74,0.2); line-height: 1; }
   .step-title { font-weight: 700; font-size: 17px; line-height: 1.5; }
   .step-desc { color: #666660; font-size: 15px; line-height: 1.7; }
 
-  /* PRICING */
-  .pricing-section {
-    padding: 100px 24px;
-    max-width: 1100px;
-    margin: 0 auto;
-    text-align: center;
-  }
+  .pricing-section { padding: 100px 24px; max-width: 1100px; margin: 0 auto; text-align: center; }
   .pricing-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -339,31 +303,11 @@
     padding: 4px 12px;
     border-radius: 100px;
   }
-  .pricing-plan {
-    font-weight: 700;
-    font-size: 14px;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 16px;
-  }
-  .pricing-price {
-    font-weight: 800;
-    font-size: 48px;
-    line-height: 1;
-    margin-bottom: 4px;
-  }
+  .pricing-plan { font-weight: 700; font-size: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; }
+  .pricing-price { font-weight: 800; font-size: 48px; line-height: 1; margin-bottom: 4px; }
   .pricing-price span { font-size: 18px; font-weight: 400; color: var(--muted); }
-  .pricing-period {
-    font-size: 14px;
-    color: var(--muted);
-    margin-bottom: 32px;
-  }
-  .pricing-features {
-    list-style: none;
-    margin-bottom: 32px;
-    flex-grow: 1;
-  }
+  .pricing-period { font-size: 14px; color: var(--muted); margin-bottom: 32px; }
+  .pricing-features { list-style: none; margin-bottom: 32px; flex-grow: 1; }
   .pricing-features li {
     padding: 8px 0;
     border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -373,12 +317,7 @@
     gap: 10px;
     color: #999990;
   }
-  .pricing-features li::before {
-    content: '✓';
-    color: var(--lime);
-    font-weight: 700;
-    flex-shrink: 0;
-  }
+  .pricing-features li::before { content: '✓'; color: var(--lime); font-weight: 700; flex-shrink: 0; }
   .pricing-cta {
     display: block;
     text-align: center;
@@ -392,15 +331,8 @@
   }
   .pricing-cta.lime { background: var(--lime); color: var(--black); }
   .pricing-cta.lime:hover { opacity: 0.85; }
-  .pricing-cta.disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-    background: #333;
-    color: #888;
-    pointer-events: auto;
-  }
+  .pricing-cta.disabled { opacity: 0.6; cursor: not-allowed; background: #333; color: #888; pointer-events: auto; }
 
-  /* FOOTER */
   footer {
     border-top: 1px solid rgba(255,255,255,0.05);
     padding: 40px 24px;
@@ -559,7 +491,7 @@
 </footer>
 
 <script>
-  let ultraAvailable = false;  // Cambia a true cuando la ciudad tenga suficientes datos
+  let ultraAvailable = false;
 
   function showUltraUnavailableMessage() {
     alert("El plan Ultra aún no está disponible en tu ciudad.\n\nNecesitamos más datos de viajes para activar funcionalidades avanzadas. ¡Sigue usando RutaOptima y ayuda a tu comunidad a alcanzar el umbral!");
@@ -572,7 +504,7 @@
       ultraCard.innerHTML = `
         <div class="pricing-badge" style="background:#333; color:#c5f24a;">Por ciudad</div>
         <div class="pricing-plan">Ultra</div>
-        <div class="pricing-price">$500 <span>MXN</span></div>
+        <div class="pricing-price">$375 <span>MXN</span></div>
         <div class="pricing-period">mensual</div>
         <ul class="pricing-features">
           <li>Todo lo del plan Pro</li>
@@ -580,12 +512,12 @@
           <li>Zonas y horarios con mayor probabilidad de viajes rentables</li>
           <li>Decisiones en tiempo real basadas en datos colectivos de tu ciudad</li>
         </ul>
-        <a href="https://buy.stripe.com/aFa4gzguvfGN33TfeP4Rq02" class="pricing-cta lime" target="_blank">Suscribirme por $500 MXN/mes</a>
+        <a href="https://buy.stripe.com/4gMbJ1dijgKRfQFc2D4Rq04" class="pricing-cta lime" target="_blank">Suscribirme por $375 MXN/mes</a>
         <div style="margin-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
           <div class="pricing-period" style="margin-bottom: 8px;">Ahorra 2 meses</div>
           <div class="pricing-price" style="font-size: 28px;">$3,750 <span>MXN</span></div>
           <div class="pricing-period">al año (equivalente a $312.50/mes)</div>
-          <a href="https://buy.stripe.com/5kQeVdbabgKRfQF1nZ4Rq03" class="pricing-cta lime" target="_blank" style="margin-top: 16px;">Suscribirme por $5,000 MXN/año</a>
+          <a href="https://buy.stripe.com/9B69AT5PRcuBawl1nZ4Rq05" class="pricing-cta lime" target="_blank" style="margin-top: 16px;">Suscribirme por $3,750 MXN/año</a>
         </div>
       `;
     } else {
