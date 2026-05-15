@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eliminar cuenta — RutaOptima</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --lime: #c5f24a;
+    --black: #0c0c0b;
+    --dark: #111110;
+    --card: #1a1a18;
+    --muted: #555550;
+    --text: #e8e8e4;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--black);
+    color: var(--text);
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(12,12,11,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+  .logo-icon {
+    width: 36px; height: 36px;
+    background: var(--lime);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--black);
+  }
+  .logo-text { font-weight: 700; font-size: 18px; color: var(--text); }
+  .logo-text span { color: var(--lime); }
+
+  main {
+    flex: 1;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 140px 24px 80px;
+    width: 100%;
+  }
+
+  .page-label {
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--lime);
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+  .subtitle {
+    color: #888880;
+    font-size: 16px;
+    margin-bottom: 48px;
+    line-height: 1.7;
+  }
+
+  .card {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 32px;
+    border: 1px solid rgba(255,255,255,0.05);
+    margin-bottom: 24px;
+  }
+
+  .card h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .card p {
+    color: #888880;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  .card p:last-child { margin-bottom: 0; }
+
+  .steps-list {
+    list-style: none;
+    margin: 16px 0;
+  }
+  .steps-list li {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 15px;
+    color: #888880;
+  }
+  .steps-list li:last-child { border-bottom: none; }
+  .step-n {
+    width: 24px; height: 24px;
+    background: rgba(197,242,74,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--lime);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .warning-box {
+    background: rgba(231,76,60,0.08);
+    border: 1px solid rgba(231,76,60,0.2);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 32px;
+  }
+  .warning-box p {
+    color: #e74c3c;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+  }
+  .warning-box strong { color: #ff6b6b; }
+
+  .btn-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--lime);
+    color: var(--black);
+    border: none;
+    padding: 14px 28px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .btn-email:hover { opacity: 0.85; }
+
+  .note {
+    font-size: 13px;
+    color: #555550;
+    margin-top: 16px;
+    line-height: 1.6;
+  }
+
+  footer {
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding: 32px 24px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--text); }
+
+  @media (max-width: 600px) {
+    nav { padding: 16px 20px; }
+    h1 { font-size: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="logo">
+    <div class="logo-icon">R</div>
+    <span class="logo-text">Ruta<span>Optima</span></span>
+  </a>
+</nav>
+
+<main>
+  <div class="page-label">Privacidad</div>
+  <h1>Eliminar tu cuenta</h1>
+  <p class="subtitle">Puedes solicitar la eliminación de tu cuenta y todos los datos asociados en cualquier momento. Procesamos tu solicitud en un plazo máximo de 30 días.</p>
+
+  <div class="warning-box">
+    <p><strong>⚠️ Esta acción es permanente.</strong> Una vez eliminada tu cuenta, no podremos recuperar tu historial de viajes, configuración ni suscripción activa. Si tienes un plan Pro o Ultra, tu suscripción se cancelará automáticamente.</p>
+  </div>
+
+  <div class="card">
+    <h2>¿Qué datos se eliminan?</h2>
+    <ul class="steps-list">
+      <li><span class="step-n">✓</span> Cuenta y credenciales de acceso</li>
+      <li><span class="step-n">✓</span> Historial completo de viajes</li>
+      <li><span class="step-n">✓</span> Configuración del vehículo y preferencias</li>
+      <li><span class="step-n">✓</span> Datos de ubicación asociados a tu cuenta</li>
+      <li><span class="step-n">✓</span> Suscripción activa (se cancela sin reembolso proporcional)</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Cómo solicitar la eliminación</h2>
+    <p>Envíanos un correo desde la dirección asociada a tu cuenta con el asunto <strong>"Eliminar mi cuenta"</strong>. Procesaremos tu solicitud en un plazo de 30 días.</p>
+    <a href="mailto:soporte@rutaoptima.mx?subject=Eliminar%20mi%20cuenta&body=Hola%2C%20solicito%20la%20eliminaci%C3%B3n%20de%20mi%20cuenta%20y%20todos%20los%20datos%20asociados." class="btn-email">
+      ✉ Enviar solicitud de eliminación
+    </a>
+    <p class="note">Al enviar este correo, confirmas que deseas eliminar tu cuenta permanentemente. Te responderemos con la confirmación en un plazo de 30 días hábiles.</p>
+  </div>
+
+</main>
+
+<footer>
+  <p style="margin-bottom:12px;">
+    <a href="index.html">Inicio</a>
+    &nbsp;·&nbsp;
+    <a href="privacy.html">Política de privacidad</a>
+    &nbsp;·&nbsp;
+    <a href="terms.html">Términos de uso</a>
+  </p>
+  <p>© 2026 RutaOptima</p>
+</footer>
+
+</body>
+</html>
