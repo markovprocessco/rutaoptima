@@ -485,6 +485,8 @@
     <a href="privacy.html">Política de privacidad</a>
     &nbsp;·&nbsp;
     <a href="terms.html">Términos de uso</a>
+    &nbsp;·&nbsp;
+    <a href="eliminar-cuenta.html">Eliminar cuenta</a>
   </p>
   <p>© 2026 RutaOptima</p>
   <p style="margin-top:8px; color:#444440;">RutaOptima es una empresa 100% mexicana</p>
@@ -497,7 +499,6 @@
     alert("El plan Ultra aún no está disponible en tu ciudad.\n\nNecesitamos más datos de viajes para activar funcionalidades avanzadas. ¡Sigue usando RutaOptima y ayuda a tu comunidad a alcanzar el umbral!");
   }
 
-  // Cargar estadísticas reales desde el backend
   async function cargarEstadisticas() {
     try {
       const res  = await fetch('https://rutaoptima-backend-production.up.railway.app/api/public/stats');
@@ -512,13 +513,10 @@
         if (elViajes) elViajes.textContent = viajes >= 1000
           ? `${Math.floor(viajes / 1000)}k+` : `${viajes}+`;
       }
-    } catch (e) {
-      // Si falla, se quedan los valores por defecto del HTML
-    }
+    } catch (e) {}
   }
   cargarEstadisticas();
 
-  // Verificar si Ultra está disponible en la ciudad del visitante
   async function verificarUltra() {
     try {
       const ciudad = encodeURIComponent('Tepic, Nayarit, México');
@@ -576,9 +574,6 @@
   }
   renderUltraCard();
 </script>
-
-</body>
-</html>
 
 </body>
 </html>
