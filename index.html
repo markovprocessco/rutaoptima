@@ -160,6 +160,13 @@
     display: inline-block;
   }
   .btn-primary:hover { transform: translateY(-2px); opacity: 0.9; }
+  .with-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  .with-icon svg { flex: none; }
   .btn-ghost {
     background: transparent;
     color: var(--text);
@@ -463,7 +470,11 @@
   <div class="nav-right">
     <a href="#proveedores" class="nav-secondary">Para negocios</a>
     <a href="https://rutaoptima-backend-production.up.railway.app/proveedor/" target="_blank" rel="noopener" class="nav-secondary">Acceso proveedores</a>
-    <a href="#precios" class="nav-cta">Únete</a>
+    <a href="#precios" class="nav-secondary">Planes</a>
+    <a href="https://play.google.com/store/apps/details?id=com.rutaoptima" target="_blank" rel="noopener" class="nav-cta with-icon">
+      <svg width="12" height="14" viewBox="0 0 12 14" fill="currentColor" aria-hidden="true"><path d="M0.6 0.4a1 1 0 0 0-.6.9v11.4a1 1 0 0 0 .6.9l6.2-6.6L0.6 0.4zM8.1 5.7L2.1 0.1l7.4 4.2-1.4 1.4zM9.9 9.7L2.1 13.9l6-5.6 1.8 1.4zM10.9 6.2c.7.4.7 1.2 0 1.6l-1.3.8-1.6-1.6 1.6-1.6 1.3.8z"/></svg>
+      Descargar
+    </a>
   </div>
 </nav>
 
@@ -472,7 +483,10 @@
   <h1>Cada viaje,<br><em>más rentable</em></h1>
   <p class="hero-sub">RutaOptima analiza cada oferta en tiempo real y te dice exactamente si aceptar, negociar o rechazar — antes de que decidas.</p>
   <div class="hero-actions">
-    <a href="#precios" class="btn-primary">Empieza gratis</a>
+    <a href="https://play.google.com/store/apps/details?id=com.rutaoptima" target="_blank" rel="noopener" class="btn-primary with-icon">
+      <svg width="14" height="16" viewBox="0 0 12 14" fill="currentColor" aria-hidden="true"><path d="M0.6 0.4a1 1 0 0 0-.6.9v11.4a1 1 0 0 0 .6.9l6.2-6.6L0.6 0.4zM8.1 5.7L2.1 0.1l7.4 4.2-1.4 1.4zM9.9 9.7L2.1 13.9l6-5.6 1.8 1.4zM10.9 6.2c.7.4.7 1.2 0 1.6l-1.3.8-1.6-1.6 1.6-1.6 1.3.8z"/></svg>
+      Descargar en Google Play
+    </a>
     <a href="#como-funciona" class="btn-ghost">Cómo funciona</a>
   </div>
   <div class="popup-preview">
@@ -578,13 +592,13 @@
         <li>Tarifas personalizadas que evolucionan con tus viajes</li>
         <li>Escala tus ingresos con el plan que elijas</li>
       </ul>
-      <a href="#" class="pricing-cta lime">Únete — 7 días gratis</a>
+      <a href="https://play.google.com/store/apps/details?id=com.rutaoptima" target="_blank" rel="noopener" class="pricing-cta lime">Descargar gratis en Google Play</a>
     </div>
 
     <div class="pricing-card featured">
       <div class="pricing-badge">Más popular</div>
       <div class="pricing-plan">Pro</div>
-      <div class="pricing-price">$200 <span>MXN</span></div>
+      <div class="pricing-price">$209 <span>MXN</span></div>
       <div class="pricing-period">mensual</div>
       <ul class="pricing-features">
         <li>Todo lo del plan Free</li>
@@ -592,12 +606,12 @@
         <li>Tarifas dinámicas del mercado</li>
         <li>Todo lo que ganaste y gastaste en cada viaje, siempre a la mano</li>
       </ul>
-      <a href="https://buy.stripe.com/4gMfZhemnfGN6g52s34Rq00" class="pricing-cta lime" target="_blank">Suscribirme por $200 MXN/mes</a>
+      <a href="https://buy.stripe.com/4gMfZhemnfGN6g52s34Rq00" class="pricing-cta lime" target="_blank">Suscribirme por $209 MXN/mes</a>
       <div style="margin-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
         <div class="pricing-period" style="margin-bottom: 8px;">Ahorra 2 meses</div>
-        <div class="pricing-price" style="font-size: 28px;">$2,000 <span>MXN</span></div>
-        <div class="pricing-period">al año (equivalente a $166.67/mes)</div>
-        <a href="https://buy.stripe.com/5kQdR96TV1PX47Xc2D4Rq01" class="pricing-cta lime" target="_blank" style="margin-top: 16px;">Suscribirme por $2,000 MXN/año</a>
+        <div class="pricing-price" style="font-size: 28px;">$2,090 <span>MXN</span></div>
+        <div class="pricing-period">al año (equivalente a $174.17/mes)</div>
+        <a href="https://buy.stripe.com/5kQdR96TV1PX47Xc2D4Rq01" class="pricing-cta lime" target="_blank" style="margin-top: 16px;">Suscribirme por $2,090 MXN/año</a>
       </div>
     </div>
 
@@ -736,7 +750,7 @@
       ultraCard.innerHTML = `
         <div class="pricing-badge" style="background:#333; color:#c5f24a;">Por ciudad</div>
         <div class="pricing-plan">Ultra</div>
-        <div class="pricing-price">$375 <span>MXN</span></div>
+        <div class="pricing-price">$399 <span>MXN</span></div>
         <div class="pricing-period">mensual</div>
         <ul class="pricing-features">
           <li>Todo lo del plan Pro</li>
@@ -745,19 +759,19 @@
           <li>Zonas y horarios con mayor probabilidad de viajes rentables</li>
           <li>Decisiones en tiempo real basadas en datos colectivos de tu ciudad</li>
         </ul>
-        <a href="https://buy.stripe.com/4gMbJ1dijgKRfQFc2D4Rq04" class="pricing-cta lime" target="_blank">Suscribirme por $375 MXN/mes</a>
+        <a href="https://buy.stripe.com/4gMbJ1dijgKRfQFc2D4Rq04" class="pricing-cta lime" target="_blank">Suscribirme por $399 MXN/mes</a>
         <div style="margin-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
           <div class="pricing-period" style="margin-bottom: 8px;">Ahorra 2 meses</div>
-          <div class="pricing-price" style="font-size: 28px;">$3,750 <span>MXN</span></div>
-          <div class="pricing-period">al año (equivalente a $312.50/mes)</div>
-          <a href="https://buy.stripe.com/9B69AT5PRcuBawl1nZ4Rq05" class="pricing-cta lime" target="_blank" style="margin-top: 16px;">Suscribirme por $3,750 MXN/año</a>
+          <div class="pricing-price" style="font-size: 28px;">$3,990 <span>MXN</span></div>
+          <div class="pricing-period">al año (equivalente a $332.50/mes)</div>
+          <a href="https://buy.stripe.com/9B69AT5PRcuBawl1nZ4Rq05" class="pricing-cta lime" target="_blank" style="margin-top: 16px;">Suscribirme por $3,990 MXN/año</a>
         </div>
       `;
     } else {
       ultraCard.innerHTML = `
         <div class="pricing-badge" style="background:#333; color:#c5f24a;">Por ciudad</div>
         <div class="pricing-plan">Ultra</div>
-        <div class="pricing-price">$375 <span>MXN</span></div>
+        <div class="pricing-price">$399 <span>MXN</span></div>
         <div class="pricing-period">mensual</div>
         <ul class="pricing-features">
           <li>Todo lo del plan Pro</li>
